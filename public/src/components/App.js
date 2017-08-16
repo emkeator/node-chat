@@ -4,6 +4,9 @@ import './App.css';
 import ChatWindow from './ChatWindow/ChatWindow';
 
 class App extends Component {
+  constructor() {
+      super();
+  }
   render() {
     return (
       <div id="App__container">

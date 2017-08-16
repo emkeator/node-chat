@@ -13,7 +13,8 @@ export default class ChatWindow extends Component {
     super();
     this.state = {
       messages: [],
-      text: ''
+      text: '',
+      nameOfMessageSender: 'Emily'
     };
 
     this.handleChange = this.handleChange.bind( this );
@@ -57,18 +58,20 @@ export default class ChatWindow extends Component {
   }
 
   render() {
+    
     return (
       <div id="ChatWindow__container">
         <div id="ChatWindow__messagesParentContainer">
           <div id="ChatWindow__messagesChildContainer">
             {
               this.state.messages.map( message => (
-                <Message id={ message.id} key={ message.id } text={ message.text } time={ message.time } edit={ this.editMessage } remove={ this.removeMessage } />
+                <Message id={ message.id} key={ message.id } text={ message.text } time={ message.time } edit={ this.editMessage } remove={ this.removeMessage } user={ (message.name) ? message.name : 'Emily'} />
               ))
             }
           </div>
         </div>
         <div id="ChatWindow__newMessageContainer">
+          <h1>Emily</h1>
           <input placeholder="What's on your mind? Press enter to send." 
                  onKeyPress={ this.createMessage }
                  onChange={ this.handleChange }

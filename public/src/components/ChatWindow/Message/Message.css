@@ -1,6 +1,6 @@
 .Message__container {
   width: calc(100% - 20px);
-  height: 65px;
+  height: 75px;
   padding: 0 10px;
   background: #fff;
   border-radius: 3px;
@@ -17,6 +17,14 @@
   left: 10px;
   font-size: 11px;
   opacity: 0.5;
+}
+
+.Message__user {
+  position: absolute;
+  top: 24px;
+  left: 10px;
+  font-size: 13px;
+  color: navy;
 }
 
 .Message__text {
